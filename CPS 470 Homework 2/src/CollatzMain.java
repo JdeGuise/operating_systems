@@ -18,6 +18,8 @@ public class CollatzMain {
 		}
 //		Process pc = Runtime.getRuntime().exec("fork()");
 //		BufferedReader in = new BufferedReader(new InputStreamReader(pc.getInputStream()));
+        ProcessBuilder pb = null;
+        pb.start();
 		
 		long one = System.currentTimeMillis();
 		
