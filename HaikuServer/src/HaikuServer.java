@@ -22,7 +22,7 @@ public class HaikuServer extends Thread  {
 				while (true) {
 					Socket haikuRequest = serverSocket.accept();
 					
-					PrintWriter pout = new PrintWriter((haikuRequest).getOutputStream(), true);//writeInt was documented)
+					PrintWriter pout = new PrintWriter((haikuRequest).getOutputStream(), true);//writeInt was documented
 					String haiku = returnHaiku();
 					pout.println(haiku);//prints a haiku
 					System.out.println(new Date() + ": Server provided\n" + haiku + "to client. Resetting for new connection.");
