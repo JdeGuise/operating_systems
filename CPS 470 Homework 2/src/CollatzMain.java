@@ -4,18 +4,15 @@ import java.util.Scanner;
 public class CollatzMain {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
-		// TODO Auto-generated method stub
 		Scanner input = new Scanner(System.in);
-		System.out.println("Enter one integer as input");
 
-		
 		
 		Thread pthread = new Thread(){
 				public void run(){
 					int choice = 0;
 
 					try{
-						
+						System.out.println("Enter one integer as input");
 						choice = input.nextInt();
 						
 					}
@@ -33,19 +30,19 @@ public class CollatzMain {
 				}
 				
 		};
-			System.out.println("Starting");
+			//System.out.println("Starting");
 			pthread.start();
-			System.out.println("Finished.");
+			
 			
 			synchronized(pthread){
-				System.out.println("Before Wait");
 				pthread.wait();
 			}		
+			
+			//System.out.println("Finished.");
 			input.close();
 	}
 	
 	public static void collatzComp(int args){
-		System.out.println("Enter your argument");
 		//Collatz conjecture
 		while(args != 1){
 			if(args % 2 == 0){
