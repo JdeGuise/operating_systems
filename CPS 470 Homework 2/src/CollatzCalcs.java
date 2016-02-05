@@ -2,7 +2,7 @@
 public class CollatzCalcs {
 	
 	public static void collatzComp(int args){
-		
+		System.out.println("Enter your argument");
 		//Collatz conjecture
 		while(args != 1){
 			if(args % 2 == 0){
@@ -14,6 +14,7 @@ public class CollatzCalcs {
 				args = (3 * args) + 1;
 			}
 		}
-		System.out.println("Args is " + args + ". Done.");
+		System.out.println("Args is " + args + "; Done.");
 	}
+	
 }
