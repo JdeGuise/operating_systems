@@ -13,7 +13,7 @@ public class Piping {
 		String scanner_input = "";			
 
 		try {
-			PrintWriter pw = new PrintWriter(initial_input);
+			PrintWriter pw = new PrintWriter(sc_input_file);
 
 			System.out.println("Enter phrase to be reverse cased");
 						
