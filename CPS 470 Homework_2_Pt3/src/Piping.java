@@ -36,7 +36,6 @@ public class Piping {
 
 			Process p = pb.start();
 			sc.close();
-
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
