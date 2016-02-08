@@ -33,7 +33,8 @@ public class CollatzMain {
 					collatzComp(Integer.parseInt(choice));
 					long two = System.currentTimeMillis();
 
-					System.out.println("Methods took " + (two-one) + "ms to complete.");
+	
+				System.out.println("Methods took " + (two-one) + "ms to complete.");
 				}
 				
 		};
