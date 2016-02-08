@@ -5,10 +5,5 @@
 - Process 2 reverses case of each character in the string
 - Process 2 sends modified message to Process 1
 
-	Requires two pipes
-	  One for sending original message from 1st to 2nd
-	  Two for sending modified message from 2nd to 1st
-
-	Can be written with UNIX or WINDOWS
-
-Swap case of file text: "cat filename | tr 'a-zA-Z' 'A-Za-z'"
+Standard activation should work fine (compile Piping.java and run from command line)
+input.txt must be in the root level of the eclipse project folder, or in the same folder as the source file (no project folder)
