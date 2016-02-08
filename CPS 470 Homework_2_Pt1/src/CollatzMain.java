@@ -1,32 +1,39 @@
 import java.io.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 public class CollatzMain {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 		Scanner input = new Scanner(System.in);
-
 		
 		Thread pthread = new Thread(){
 				public void run(){
-					int choice = 0;
-
-					try{
-						System.out.println("Enter one integer as input");
-						choice = input.nextInt();
-						
-					}
-					catch(InputMismatchException ime){
-						ime.printStackTrace();
-					}
+					String choice = "";
+					System.out.println("Enter one integer as input");
+					boolean isValid = false;
 					
+					while(!isValid){
+						try{
+							choice = input.nextLine();
+							Integer.parseInt(choice);
+							if(Integer.parseInt(choice) < 0){
+								System.out.println("Choice is negative and invalid.  Please try again.");
+								continue;
+							}
+							
+							isValid = true;
+						}
+						catch(NumberFormatException nme){
+							nme.printStackTrace();
+						}
+			
+					}	
 					long one = System.currentTimeMillis();
-
-					collatzComp(choice);
-
+					collatzComp(Integer.parseInt(choice));
 					long two = System.currentTimeMillis();
+
 					System.out.println("Methods took " + (two-one) + "ms to complete.");
-					
 				}
 				
 		};
