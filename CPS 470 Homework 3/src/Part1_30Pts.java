@@ -1,4 +1,4 @@
-//Part1_30Pts.java, John deGuise/Jon Ragon, CPS 470 2-3:15 T/TH, Due 2/25 by 11:59PM
+//Part1_30Pts.java, John deGuise/Jon Ragon, CPS 470 2-3:15 T/TH, Due 2/29 by 11:59PM
 
 // Program runs from command line with int args, and calculates the respective function per thread.
 
